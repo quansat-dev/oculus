@@ -1,0 +1,52 @@
+{
+	"name": "@quansat/oculus",
+	"version": "0.0.0",
+	"description": "Colour vision deficency toolkit",
+	"type": "module",
+	"types": "types/index.d.ts",
+	"exports": {
+		"./ishihara": {
+			"types": "./types/index.d.ts",
+			"import": "./src/ishihara/index.js",
+			"default": "./src/ishihara/index.js"
+		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"files": [
+		"src",
+		"types"
+	],
+	"keywords": [
+		"colour",
+		"deficiency",
+		"blindness",
+		"ishihara"
+	],
+	"author": {
+		"email": "vnphanquang@gmail.com",
+		"name": "Quang Phan",
+		"url": "https://github.com/vnphanquang"
+	},
+	"license": "MIT",
+	"homepage": "https://oculus.quansat.dev",
+	"bugs": {
+		"url": "https://github.com/quansat-dev/oculus/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/quansat-dev/oculus.git",
+		"directory": "packages/oculus"
+	},
+	"scripts": {
+		"prepublishOnly": "dts-buddy --write && publint",
+		"dts": "dts-buddy --write",
+		"lint": "eslint .",
+		"format": "prettier --ignore-path ../../.prettierignore --write ."
+	},
+	"volta": {
+		"extends": "../../package.json"
+	}
+}

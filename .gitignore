@@ -5,6 +5,7 @@ node_modules
 .wrangler
 .svelte-kit
 build
+types
 
 # OS
 .DS_Store

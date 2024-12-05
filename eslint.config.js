@@ -4,7 +4,7 @@ import { includeIgnoreFile } from '@eslint/compat';
 import vnphanquang from '@vnphanquang/eslint-config';
 import jsdoc from 'eslint-plugin-jsdoc';
 import svelte from 'eslint-plugin-svelte';
-import ts from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 
 const svelteConfig = [
@@ -15,7 +15,7 @@ const svelteConfig = [
 
 		languageOptions: {
 			parserOptions: {
-				parser: ts.parser,
+				parser: tseslint.parser,
 			},
 		},
 	},
@@ -28,7 +28,7 @@ const jsdocConfig = [
 	},
 ];
 
-export default ts.config(
+export default tseslint.config(
 	includeIgnoreFile(gitignorePath),
 	...vnphanquang,
 	...svelteConfig,
