@@ -1,6 +1,7 @@
 node_modules
 
 # Output
+.turbo
 .output
 .wrangler
 .svelte-kit
