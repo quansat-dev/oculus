@@ -9,7 +9,8 @@
 			"types": "./types/index.d.ts",
 			"import": "./src/ishihara/index.js",
 			"default": "./src/ishihara/index.js"
-		}
+		},
+		"./ishihara/*.jpg": "./src/ishihara/plates/*.jpg"
 	},
 	"publishConfig": {
 		"access": "public",
